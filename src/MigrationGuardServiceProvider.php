@@ -5,14 +5,24 @@ namespace WebilioXyz\LaravelMigrationGuard;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Migrations\MigrateCommand;
+use Illuminate\Database\Migrations\Migrator;
+use Illuminate\Contracts\Events\Dispatcher;
 
 class MigrationGuardServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // Hook into the migrate command
+        // Hook into the migrate command by resolving the MigrateCommand
         $this->app->extend(MigrateCommand::class, function ($command, $app) {
-            return new class($command) extends MigrateCommand {
+            return new class($app['migrator'], $app['events']) extends MigrateCommand {
+                protected $migrator;
+
+                public function __construct(Migrator $migrator, Dispatcher $dispatcher)
+                {
+                    parent::__construct($migrator, $dispatcher);
+                    $this->migrator = $migrator;
+                }
+
                 public function handle()
                 {
                     // Check if the 'migrations' table is empty but other tables exist
