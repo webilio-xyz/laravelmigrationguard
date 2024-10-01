@@ -11,7 +11,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "WebilioXyz\\Laravelmigrationguard\\MigrationGuardServiceProvider"
+                "WebilioXyz\\LaravelMigrationguard\\MigrationGuardServiceProvider"
             ]
         }
     },
