@@ -1,0 +1,30 @@
+{
+    "name": "webilioxyz/laravelmigrationguard",
+    "description": "Package to have safe migration when a bdd already exist",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Webilioxyz\\LaravelMigrationGuard\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webilioxyz\\Laravelmigrationguard\\MigrationGuardServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "clesel",
+            "email": "cedric.lesel@webilio.ca"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0 || ^9.0 || ^10.0 || ^11.0"
+    }
+}
