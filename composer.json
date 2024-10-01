@@ -5,13 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Webilioxyz\\LaravelMigrationGuard\\": "src/"
+            "WebilioXyz\\LaravelMigrationGuard\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webilioxyz\\Laravelmigrationguard\\MigrationGuardServiceProvider"
+                "WebilioXyz\\Laravelmigrationguard\\MigrationGuardServiceProvider"
             ]
         }
     },

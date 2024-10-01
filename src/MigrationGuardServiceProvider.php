@@ -1,6 +1,6 @@
 <?php
 
-namespace Webilioxyz\LaravelMigrationGuard;
+namespace WebilioXyz\LaravelMigrationGuard;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
