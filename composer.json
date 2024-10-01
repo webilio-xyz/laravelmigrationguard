@@ -1,5 +1,5 @@
 {
-    "name": "webilioxyz/laravelmigrationguard",
+    "name": "webilio-xyz/laravelmigrationguard",
     "description": "Package to have safe migration when a bdd already exist",
     "type": "library",
     "license": "MIT",
